@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<title>demo</title>
+	<!--[if lt IE 9]>
+			<script src="es5-shim.min.js"></script>
+			<script src="es5-sham.min.js"></script>
+			<script src="json2.js"></script>
+	<![endif]-->
+	<link rel="stylesheet" type="text/css" href="/common/font/iconfont.css">
+	<link rel="stylesheet" type="text/css" href="/demo/css/sass.bundle.css">
+	<!-- <script src="http://192.168.1.108:9000/target/target-script-min.js#anonymous"></script>
+	 -->
+	<script type="text/javascript" src="/common/scripts/libs/jquery.min.js"></script>
+	<script type="text/javascript" src="/demo/js/app.bundle.js"></script>
+</head>
+<body>
+	<header>
+		<div id="list" class="iconfont">&#xe600;</div>
+	</header>
+	<nav>
+	</nav>
+	<section>
+		<div id="index"></div>
+	</section>
+	<footer>
+		<div id="fangzi" class="iconfont" style="font-size: 0.3rem">&#xe610;<span>主页</span></div>
+		<div id="demo" class="iconfont">&#xe601;<span>案例</span></div>
+		<div id="blog" class="iconfont">&#xe60d;<span>博客</span></div>
+		<div id="scrawl" class="iconfont">&#xe63d;<span>涂鸦</span></div>
+	</footer>
+	<script type="text/javascript">
+		$("#fangzi").on("click",function(){
+			window.location.href="/index/views/index.html"
+		})
+	</script>
+
+</body>
+</html>
