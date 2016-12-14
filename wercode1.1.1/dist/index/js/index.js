@@ -247,5 +247,54 @@ require(["footer"],function(footer){
 	window.addEventListener("resize",function(){
 		window.location.reload();
 	});
-});
+});//require end
+
+require(["jquery","hash"],function($,hash){
+	$("#navpc").find("ul").children("li").eq(0).on("click",function(){
+		$("#navpc").children().eq(0).css("background","linear-gradient(to right,rgba(0,0,0,1) 5%,rgba(255,0,0,1) 13%,rgba(0,0,0,1) 22%)");
+		$(this).find("a").css("color","red");
+		$(this).siblings().find("a").css("color","#ccc");
+		window.location.href ="/";
+	});
+	$("#navpc").find("ul").children("li").eq(1).on("click",function(){
+		$("#navpc").children().eq(0).css("background","linear-gradient(to right,rgba(0,0,0,1) 28%,rgba(255,0,0,1) 40%,rgba(0,0,0,1) 45%)");
+		$(this).find("a").css("color","red");
+		$(this).siblings().find("a").css("color","#ccc");
+		window.location.href ="#/demo";
+		
+	});
+	$("#navpc").find("ul").children("li").eq(2).on("click",function(){
+		$("#navpc").children().eq(0).css("background","linear-gradient(to right,rgba(0,0,0,1) 52%,rgba(255,0,0,1) 65%,rgba(0,0,0,1) 72%)");
+		$(this).find("a").css("color","red");
+		$(this).siblings().find("a").css("color","#ccc");
+		window.location.href = "#/blog";
+		
+	});
+	$("#navpc").find("ul").children("li").eq(3).on("click",function(){
+		$("#navpc").children().eq(0).css("background","linear-gradient(to right,rgba(0,0,0,1) 78%,rgba(255,0,0,1) 90%,rgba(0,0,0,1) 97%)");
+		$(this).find("a").css("color","red");
+		$(this).siblings().find("a").css("color","#ccc");
+		window.location.href = "#/scrawl";
+		
+	});
+
+	////////////
+	//向 hash 中加入一个自定义的路由地址
+	hash.addroute("/demo",function(){
+		$("#mainWrapper").load("/demo/html/demoindex.html");
+	});
+				
+    //向 hash 中加入一个自定义的路由地址
+	hash.addroute("/blog",function(){
+		$("#mainWrapper").load("/html/user.html");
+	});
+				
+	//向 hash 中加入一个自定义的路由地址
+	hash.addroute("/scrawl",function(){
+		$("#mainWrapper").load("/html/other.html");
+	});
+
+	hash.refresh();
+	
+});//require end
 
